@@ -23,7 +23,7 @@ export const translations: Record<Locale, PortfolioCopy> = {
         "Desarrollo soluciones de software productivas, enfocadas en logica de negocio, escalabilidad y resultados reales.",
       roleLine: "Analista de Desarrollo de Software",
       profileCardText:
-        "Ejecucion full stack con foco backend, arquitectura practica e implementacion orientada al negocio.",
+        "Full stack developer con foco backend, arquitectura practica e implementacion orientada al negocio.",
       avatarPlaceholder: "Placeholder de foto",
       projectsCta: "Ver Proyectos",
       cvCta: "Descargar CV",
@@ -87,7 +87,7 @@ export const translations: Record<Locale, PortfolioCopy> = {
         "I build production-minded software focused on business logic, scalability, and practical outcomes.",
       roleLine: "Software Development Analyst",
       profileCardText:
-        "Full stack execution with strong backend focus, practical architecture, and business-oriented implementation.",
+        "Full stack developer with strong backend focus, practical architecture, and business-oriented implementation.",
       avatarPlaceholder: "Photo placeholder",
       projectsCta: "View Projects",
       cvCta: "Download CV",

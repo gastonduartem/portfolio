@@ -29,7 +29,7 @@ export const projects: ProjectItem[] = [
       en: "Tournament app for match scheduling, brackets, and progression tracking with a straightforward user experience.",
     },
     stack: ["JavaScript", "Node.js", "React", "CSS"],
-    projectUrl: null,
+    projectUrl: "https://torneodetruco.vercel.app/",
   },
   {
     id: "full-stack-ecommerce-platform",
@@ -39,7 +39,7 @@ export const projects: ProjectItem[] = [
       en: "End-to-end e-commerce application with catalog, order workflows, and architecture designed to scale.",
     },
     stack: ["Next.js", "Node.js", "PostgreSQL", "Tailwind"],
-    projectUrl: null,
+    projectUrl: "https://github.com/gastonduartem/Challenge-1",
   },
   {
     id: "distributed-logging-system",
@@ -49,7 +49,7 @@ export const projects: ProjectItem[] = [
       en: "Microservices for event tracing, centralized logs, and technical monitoring in distributed systems.",
     },
     stack: ["Python", "Node.js", "PostgreSQL", "Docker"],
-    projectUrl: null,
+    projectUrl: "https://github.com/gastonduartem/Logs",
   },
   {
     id: "microservices-architecture-platform",
@@ -59,6 +59,6 @@ export const projects: ProjectItem[] = [
       en: "Microservice-oriented implementation focused on service communication, resilience, and maintainability.",
     },
     stack: ["Python", "Node.js", "PostgreSQL", "REST"],
-    projectUrl: null,
+    projectUrl: "https://github.com/gastonduartem/Microservicios",
   },
 ];
