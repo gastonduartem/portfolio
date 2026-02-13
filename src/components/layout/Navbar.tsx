@@ -53,9 +53,9 @@ export const Navbar = ({
             <Image
               src="/images/logo.png"
               alt="Logo Gaston Duarte"
-              width={32}
-              height={32}
-              className="h-8 w-8 object-contain"
+              width={64}
+              height={64}
+              className="h-11 w-11 shrink-0 object-contain sm:h-14 sm:w-14"
             />
             <span className="hidden text-sm font-semibold sm:inline md:text-base">
               {name}
