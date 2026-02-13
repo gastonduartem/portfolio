@@ -3,12 +3,13 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Locale, ProfileData, PortfolioCopy } from "@/types/site";
 
 interface HeroSectionProps {
+  name: string;
   profile: ProfileData;
   locale: Locale;
   copy: PortfolioCopy["hero"];
 }
 
-export const HeroSection = ({ profile, locale, copy }: HeroSectionProps) => {
+export const HeroSection = ({ name, profile, locale, copy }: HeroSectionProps) => {
   const showAvatarLabel = profile.avatar.includes("placeholder");
 
   return (
@@ -31,7 +32,7 @@ export const HeroSection = ({ profile, locale, copy }: HeroSectionProps) => {
                 {copy.badge}
               </p>
               <h1 className="text-4xl font-bold leading-tight md:text-5xl">
-                {profile.name}
+                {name}
               </h1>
               <p className="mt-3 text-xl text-[var(--accent-soft)]">{profile.title}</p>
               <p className="mt-6 max-w-2xl leading-relaxed text-[var(--text-soft)]">
@@ -56,7 +57,7 @@ export const HeroSection = ({ profile, locale, copy }: HeroSectionProps) => {
               <div className="relative h-40 w-40 overflow-hidden rounded-2xl border md:h-48 md:w-48">
                 <Image
                   src={profile.avatar}
-                  alt={`${profile.name} profile photo`}
+                  alt={`${name} profile photo`}
                   fill
                   className="object-cover"
                 />

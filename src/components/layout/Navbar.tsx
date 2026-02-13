@@ -44,19 +44,23 @@ export const Navbar = ({
     { href: "#projects", label: nav.projects },
     { href: "#contact", label: nav.contact },
   ];
+  const logoSrc =
+    theme === "dark" ? "/images/logo-oscuro.png" : "/images/logo-claro.png";
 
   return (
     <header className="glass-panel sticky top-0 z-50 border-b">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-3 md:px-8">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <a href="#home" className="flex items-center gap-2">
-            <Image
-              src="/images/logo.png"
-              alt="Logo Gaston Duarte"
-              width={96}
-              height={96}
-              className="h-14 w-14 shrink-0 object-cover sm:h-20 sm:w-20"
-            />
+            <span className="relative h-14 w-24 shrink-0 overflow-hidden sm:h-20 sm:w-32">
+              <Image
+                src={logoSrc}
+                alt="Logo Gaston Duarte"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 96px, 128px"
+              />
+            </span>
             <span className="hidden text-sm font-semibold sm:inline md:text-base">
               {name}
             </span>

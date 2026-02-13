@@ -26,6 +26,7 @@ export const PortfolioPage = () => {
   }, []);
 
   const copy = translations[locale];
+  const displayName = locale === "es" ? "Gastón Duarte" : "Gaston Duarte";
 
   if (showLoader) {
     return <Loader text={copy.loader.text} />;
@@ -35,7 +36,7 @@ export const PortfolioPage = () => {
     <div className="relative overflow-x-clip">
       <div className="grid-overlay pointer-events-none fixed inset-0 z-0 opacity-15" />
       <Navbar
-        name={profile.name}
+        name={displayName}
         nav={copy.nav}
         locale={locale}
         onLocaleChange={setLocale}
@@ -46,7 +47,12 @@ export const PortfolioPage = () => {
         github={profile.github}
       />
       <main className="relative z-10">
-        <HeroSection profile={profile} locale={locale} copy={copy.hero} />
+        <HeroSection
+          name={displayName}
+          profile={profile}
+          locale={locale}
+          copy={copy.hero}
+        />
         <AboutSection copy={copy.about} />
         <SkillsSection copy={copy.skills} skills={skills} />
         <ProjectsSection locale={locale} copy={copy.projects} projects={projects} />
