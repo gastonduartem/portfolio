@@ -47,10 +47,12 @@ export const Navbar = ({
   return (
     <header className="glass-panel sticky top-0 z-50 border-b">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-3 md:px-8">
-        <div className="flex items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <a href="#home" className="flex items-center gap-2">
             <span className="terminal-label font-bold tracking-[0.22em]">GD</span>
-            <span className="text-sm font-semibold md:text-base">{name}</span>
+            <span className="hidden text-sm font-semibold sm:inline md:text-base">
+              {name}
+            </span>
           </a>
 
           <div className="flex items-center gap-2">

@@ -24,7 +24,7 @@ export const ThemeToggle = ({
       aria-label={isDark ? lightLabel : darkLabel}
     >
       {isDark ? <LuMoonStar size={14} /> : <LuSun size={14} />}
-      <span>{isDark ? darkLabel : lightLabel}</span>
+      <span className="hidden sm:inline">{isDark ? darkLabel : lightLabel}</span>
     </button>
   );
 };
