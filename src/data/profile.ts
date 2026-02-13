@@ -4,7 +4,7 @@ export const profile: ProfileData = {
   name: "Gaston Duarte",
   title: "Full Stack Developer",
   email: "gastonduarte.dev@gmail.com",
-  linkedin: "https://www.linkedin.com/in/gaston-duarte-a15b8a1b2",
+  linkedin: "https://www.linkedin.com/in/gaston-duarte-dev",
   github: "https://github.com/gastonduartem",
   heroBackground: "/images/hero-background.png",
   avatar: "/images/profile-picture.png",
