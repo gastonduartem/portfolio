@@ -13,6 +13,10 @@ export const projects: ProjectItem[] = [
     },
     stack: ["Next.js", "Node.js", "PostgreSQL", "TypeScript"],
     projectUrl: null,
+    buttonLabel: {
+      es: "En desarrollo",
+      en: "In development",
+    },
   },
   {
     id: "intercollegiate-sports-management-platform",
@@ -26,6 +30,10 @@ export const projects: ProjectItem[] = [
     },
     stack: ["React", "Node.js", "PostgreSQL", "Tailwind"],
     projectUrl: null,
+    buttonLabel: {
+      es: "En desarrollo",
+      en: "In development",
+    },
   },
   {
     id: "truco-tournament-platform",
@@ -52,6 +60,10 @@ export const projects: ProjectItem[] = [
     },
     stack: ["Next.js", "Node.js", "PostgreSQL", "Tailwind"],
     projectUrl: "https://github.com/gastonduartem/Challenge-1",
+    buttonLabel: {
+      es: "Ir al repositorio",
+      en: "Go to repository",
+    },
   },
   {
     id: "distributed-logging-system",
@@ -65,6 +77,10 @@ export const projects: ProjectItem[] = [
     },
     stack: ["Python", "Node.js", "PostgreSQL", "Docker"],
     projectUrl: "https://github.com/gastonduartem/Logs",
+    buttonLabel: {
+      es: "Ir al repositorio",
+      en: "Go to repository",
+    },
   },
   {
     id: "microservices-architecture-platform",
@@ -78,5 +94,9 @@ export const projects: ProjectItem[] = [
     },
     stack: ["Python", "Node.js", "PostgreSQL", "REST"],
     projectUrl: "https://github.com/gastonduartem/Microservicios",
+    buttonLabel: {
+      es: "Ir al repositorio",
+      en: "Go to repository",
+    },
   },
 ];

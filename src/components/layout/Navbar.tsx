@@ -39,7 +39,6 @@ export const Navbar = ({
 }: NavbarProps) => {
   const links = [
     { href: "#home", label: nav.home },
-    { href: "#about", label: nav.about },
     { href: "#skills", label: nav.skills },
     { href: "#projects", label: nav.projects },
     { href: "#contact", label: nav.contact },

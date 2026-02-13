@@ -35,9 +35,13 @@ export const HeroSection = ({ name, profile, locale, copy }: HeroSectionProps) =
                 {name}
               </h1>
               <p className="mt-3 text-xl text-[var(--accent-soft)]">{profile.title}</p>
-              <p className="mt-6 max-w-2xl leading-relaxed text-[var(--text-soft)]">
-                {copy.description}
-              </p>
+              <div className="mt-6 max-w-2xl space-y-3">
+                {copy.descriptionParagraphs.map((paragraph) => (
+                  <p key={paragraph} className="leading-relaxed text-[var(--text-soft)]">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href="#projects" className="button-primary">
                   {copy.projectsCta}
@@ -46,9 +50,6 @@ export const HeroSection = ({ name, profile, locale, copy }: HeroSectionProps) =
                   {copy.cvCta}
                 </a>
               </div>
-              <p className="mt-4 font-mono text-[11px] text-[var(--text-soft)]">
-                {copy.cvHint}
-              </p>
             </div>
           </Reveal>
 
@@ -68,9 +69,23 @@ export const HeroSection = ({ name, profile, locale, copy }: HeroSectionProps) =
                 ) : null}
               </div>
               <span className="mt-5 terminal-label">{copy.roleLine}</span>
-              <p className="mt-4 text-center text-sm leading-relaxed text-[var(--text-soft)]">
-                {copy.profileCardText}
-              </p>
+              <div className="mt-4 text-center">
+                <p className="text-xs font-semibold tracking-[0.18em] text-[var(--accent-soft)]">
+                  {copy.focusTitle}
+                </p>
+                <ul className="mt-3 space-y-1 text-sm leading-relaxed text-[var(--text-soft)]">
+                  {copy.focusItems.map((item, index) => (
+                    <li key={item}>
+                      <span>{item}</span>
+                      {index < copy.focusItems.length - 1 ? (
+                        <span className="block text-[var(--accent-soft)]" aria-hidden="true">
+                          -
+                        </span>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </Reveal>
         </div>

@@ -9,17 +9,26 @@ const isLocale = (value: string | null): value is Locale => {
   return value === "es" || value === "en";
 };
 
-const getInitialLocale = (): Locale => {
-  if (typeof window === "undefined") return "en";
-
-  const storedLocale = window.localStorage.getItem(STORAGE_KEY);
-  if (isLocale(storedLocale)) return storedLocale;
-
-  return window.navigator.language.toLowerCase().startsWith("es") ? "es" : "en";
-};
-
 export const useLocale = () => {
-  const [locale, setLocale] = useState<Locale>(getInitialLocale);
+  const [locale, setLocale] = useState<Locale>("en");
+
+  useEffect(() => {
+    const storedLocale = window.localStorage.getItem(STORAGE_KEY);
+    if (isLocale(storedLocale)) {
+      const frameId = window.requestAnimationFrame(() => {
+        setLocale(storedLocale);
+      });
+      return () => window.cancelAnimationFrame(frameId);
+    }
+
+    const navigatorLocale = window.navigator.language.toLowerCase().startsWith("es")
+      ? "es"
+      : "en";
+    const frameId = window.requestAnimationFrame(() => {
+      setLocale(navigatorLocale);
+    });
+    return () => window.cancelAnimationFrame(frameId);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, locale);

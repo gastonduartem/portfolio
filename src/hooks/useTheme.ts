@@ -9,15 +9,18 @@ const isTheme = (value: string | null): value is Theme => {
   return value === "dark" || value === "light";
 };
 
-const getInitialTheme = (): Theme => {
-  if (typeof window === "undefined") return "dark";
-
-  const storedTheme = window.localStorage.getItem(STORAGE_KEY);
-  return isTheme(storedTheme) ? storedTheme : "dark";
-};
-
 export const useTheme = () => {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const [theme, setTheme] = useState<Theme>("dark");
+
+  useEffect(() => {
+    const storedTheme = window.localStorage.getItem(STORAGE_KEY);
+    if (isTheme(storedTheme)) {
+      const frameId = window.requestAnimationFrame(() => {
+        setTheme(storedTheme);
+      });
+      return () => window.cancelAnimationFrame(frameId);
+    }
+  }, []);
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;

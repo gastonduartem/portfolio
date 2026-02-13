@@ -19,23 +19,38 @@ export const translations: Record<Locale, PortfolioCopy> = {
     },
     hero: {
       badge: "PORTAFOLIO FULL STACK | REMOTE READY",
-      description:
-        "Desarrollo soluciones de software productivas, enfocadas en lógica de negocio, escalabilidad y resultados reales.",
+      descriptionParagraphs: [
+        "Diseño y construyo sistemas de negocio escalables con Node.js, Python, Next.js y PostgreSQL para entornos de producción remotos.",
+        "He desarrollado plataformas estilo ERP, sistemas de gestión de torneos, aplicaciones full-stack de e-commerce y microservicios de logging distribuido utilizados en escenarios de producción.",
+        "Me encuentro en aprendizaje continuo y desafiando mis propios límites, con el objetivo de crecer como un ingeniero de alto impacto capaz de liderar el diseño de sistemas escalables y equipos remote-first.",
+      ],
       roleLine: "Analista de Desarrollo de Software",
-      profileCardText:
-        "Full stack developer con foco backend, arquitectura práctica e implementación orientada al negocio.",
+      focusTitle: "ÁREAS CLAVE",
+      focusItems: [
+        "Arquitectura de sistemas de negocio",
+        "Backend productivo listo para producción",
+        "Optimización de datos y rendimiento",
+      ],
       avatarPlaceholder: "Placeholder de foto",
       projectsCta: "Ver Proyectos",
       cvCta: "Descargar CV",
-      cvHint:
-        "CVs esperados en /public/cv/gaston-duarte-cv-es.pdf y /public/cv/gaston-duarte-cv-en.pdf",
     },
     about: {
       kicker: "Perfil",
       title: "Sobre mí",
       summary:
-        "Soy desarrollador de software enfocado en crear soluciones prácticas y escalables para problemas reales de negocio. Trabajo en desarrollo de sistemas internos, reglas de negocio y optimización de bases de datos, con una mirada estructurada desde Análisis de Sistemas y ejecución full stack de punta a punta.",
-      full: "Actualmente trabajo como Analista de Desarrollo de Software, donde diseño y mejoro sistemas internos, implemento reglas de negocio, optimizo procesos en bases de datos y traduzco necesidades operativas en soluciones técnicas confiables. He desarrollado sistemas tipo ERP, plataformas de gestión de torneos, aplicaciones e-commerce full-stack, microservicios de logging distribuido y otras soluciones productivas pensadas para entornos reales. Me encuentro en constante aprendizaje, desafiando mis propios límites y buscando crecer para liderar proyectos de mayor impacto.",
+        "Actualmente trabajo como Analista de Desarrollo de Software, diseñando y mejorando sistemas internos de negocio, implementando lógica de negocio compleja y optimizando el rendimiento de bases de datos para entornos operativos reales.",
+      paragraphs: [
+        "Actualmente trabajo como Analista de Desarrollo de Software, diseñando y mejorando sistemas internos de negocio, implementando lógica de negocio compleja y optimizando el rendimiento de bases de datos para entornos operativos reales.",
+        "He desarrollado plataformas estilo ERP, sistemas de gestión de torneos, aplicaciones full-stack de e-commerce y microservicios de logging distribuido utilizados en escenarios de producción.",
+        "Me encuentro en aprendizaje continuo y desafiando mis propios límites, con el objetivo de crecer como un ingeniero de alto impacto capaz de liderar el diseño de sistemas escalables y equipos remote-first.",
+      ],
+      focusTitle: "ÁREAS CLAVE",
+      focusItems: [
+        "Arquitectura de sistemas de negocio",
+        "Backend productivo listo para producción",
+        "Optimización de datos y rendimiento",
+      ],
       readMore: "Leer más",
       showLess: "Mostrar menos",
     },
@@ -62,8 +77,7 @@ export const translations: Record<Locale, PortfolioCopy> = {
       github: "GitHub",
       email: "Email",
     },
-    footer:
-      "Gaston Duarte | Full Stack Developer | En construcción constante.",
+    footer: "Gastón Duarte | Full Stack Developer | En construcción constante.",
   },
   en: {
     loader: {
@@ -83,23 +97,38 @@ export const translations: Record<Locale, PortfolioCopy> = {
     },
     hero: {
       badge: "FULL STACK PORTFOLIO | REMOTE READY",
-      description:
-        "I build production-minded software focused on business logic, scalability, and practical outcomes.",
+      descriptionParagraphs: [
+        "I design and build scalable business systems using Node.js, Python, Next.js, and PostgreSQL for production-ready remote environments.",
+        "I've built ERP-style platforms, tournament management systems, full-stack e-commerce applications, and distributed logging microservices used in production scenarios.",
+        "I'm continuously learning and pushing my limits, aiming to grow into a high-impact engineer capable of leading scalable system design and remote-first teams.",
+      ],
       roleLine: "Software Development Analyst",
-      profileCardText:
-        "Full stack developer with strong backend focus, practical architecture, and business-oriented implementation.",
+      focusTitle: "CORE FOCUS",
+      focusItems: [
+        "Business Systems Architecture",
+        "Production-Ready Backend Development",
+        "Data & Performance Optimization",
+      ],
       avatarPlaceholder: "Photo placeholder",
       projectsCta: "View Projects",
       cvCta: "Download CV",
-      cvHint:
-        "Expected CV files at /public/cv/gaston-duarte-cv-es.pdf and /public/cv/gaston-duarte-cv-en.pdf",
     },
     about: {
       kicker: "Profile",
       title: "About Me",
       summary:
-        "I am a software developer focused on practical and scalable solutions for real business problems. I work on internal systems, business rules, and database optimization with structured systems thinking and end-to-end full stack execution.",
-      full: "I currently work as a Software Development Analyst, where I design and improve internal systems, implement business logic, optimize database processes, and translate operational needs into reliable technical solutions. I have built ERP-style systems, tournament management platforms, full-stack e-commerce applications, distributed logging microservices, and other production-ready solutions designed for real use. I am constantly learning, pushing my limits, and aiming to grow into an engineer capable of leading high-impact projects.",
+        "I currently work as a Software Development Analyst, designing and improving internal business systems, implementing complex business logic, and optimizing database performance for real operational environments.",
+      paragraphs: [
+        "I currently work as a Software Development Analyst, designing and improving internal business systems, implementing complex business logic, and optimizing database performance for real operational environments.",
+        "I've built ERP-style platforms, tournament management systems, full-stack e-commerce applications, and distributed logging microservices used in production scenarios.",
+        "I'm continuously learning and pushing my limits, aiming to grow into a high-impact engineer capable of leading scalable system design and remote-first teams.",
+      ],
+      focusTitle: "CORE FOCUS",
+      focusItems: [
+        "Business Systems Architecture",
+        "Production-Ready Backend Development",
+        "Data & Performance Optimization",
+      ],
       readMore: "Read more",
       showLess: "Show less",
     },
@@ -126,6 +155,6 @@ export const translations: Record<Locale, PortfolioCopy> = {
       github: "GitHub",
       email: "Email",
     },
-    footer: "Gaston Duarte | Full Stack Developer | Building with intent.",
+    footer: "Gastón Duarte | Full Stack Developer | Building with intent.",
   },
 };

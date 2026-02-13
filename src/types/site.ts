@@ -34,6 +34,7 @@ export interface ProjectItem {
   description: Record<Locale, string>;
   stack: string[];
   projectUrl: string | null;
+  buttonLabel?: Partial<Record<Locale, string>>;
 }
 
 export interface PortfolioCopy {
@@ -54,19 +55,21 @@ export interface PortfolioCopy {
   };
   hero: {
     badge: string;
-    description: string;
+    descriptionParagraphs: [string, string, string];
     roleLine: string;
-    profileCardText: string;
+    focusTitle: string;
+    focusItems: [string, string, string];
     avatarPlaceholder: string;
     projectsCta: string;
     cvCta: string;
-    cvHint: string;
   };
   about: {
     kicker: string;
     title: string;
     summary: string;
-    full: string;
+    paragraphs: [string, string, string];
+    focusTitle: string;
+    focusItems: [string, string, string];
     readMore: string;
     showLess: string;
   };

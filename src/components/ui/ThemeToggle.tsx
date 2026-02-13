@@ -20,10 +20,10 @@ export const ThemeToggle = ({
     <button
       type="button"
       onClick={onToggle}
-      className="inline-flex items-center gap-2 rounded-lg border px-3 py-1.5 text-xs transition hover:border-[var(--accent)]"
+      className="inline-flex h-12 items-center gap-2 rounded-xl border px-4 text-sm font-semibold transition hover:border-[var(--accent)]"
       aria-label={isDark ? lightLabel : darkLabel}
     >
-      {isDark ? <LuMoonStar size={14} /> : <LuSun size={14} />}
+      {isDark ? <LuMoonStar size={16} /> : <LuSun size={16} />}
       <span className="hidden sm:inline">{isDark ? darkLabel : lightLabel}</span>
     </button>
   );

@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
-import { AboutSection } from "@/components/sections/AboutSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
@@ -26,10 +25,10 @@ export const PortfolioPage = () => {
   }, []);
 
   const copy = translations[locale];
-  const displayName = locale === "es" ? "Gastón Duarte" : "Gaston Duarte";
+  const displayName = locale === "es" ? "Gast\u00f3n Duarte" : "Gaston Duarte";
 
   if (showLoader) {
-    return <Loader text={copy.loader.text} />;
+    return <Loader text={copy.loader.text} theme={theme} />;
   }
 
   return (
@@ -53,7 +52,6 @@ export const PortfolioPage = () => {
           locale={locale}
           copy={copy.hero}
         />
-        <AboutSection copy={copy.about} />
         <SkillsSection copy={copy.skills} skills={skills} />
         <ProjectsSection locale={locale} copy={copy.projects} projects={projects} />
         <ContactSection copy={copy.contact} profile={profile} />
