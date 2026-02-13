@@ -50,15 +50,13 @@ export const Navbar = ({
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-3 md:px-8">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <a href="#home" className="flex items-center gap-2">
-            <span className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border bg-white/70 p-1">
-              <Image
-                src="/images/logo.png"
-                alt="Logo Gaston Duarte"
-                width={28}
-                height={28}
-                className="h-full w-full object-contain"
-              />
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt="Logo Gaston Duarte"
+              width={32}
+              height={32}
+              className="h-8 w-8 object-contain"
+            />
             <span className="hidden text-sm font-semibold sm:inline md:text-base">
               {name}
             </span>
