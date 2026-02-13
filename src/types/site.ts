@@ -30,7 +30,7 @@ export interface SkillItem {
 
 export interface ProjectItem {
   id: string;
-  title: string;
+  title: Record<Locale, string>;
   description: Record<Locale, string>;
   stack: string[];
   projectUrl: string | null;

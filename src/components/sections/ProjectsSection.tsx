@@ -23,7 +23,7 @@ export const ProjectsSection = ({ locale, copy, projects }: ProjectsSectionProps
         {projects.map((project, index) => (
           <Reveal key={project.id} delay={index * 70}>
             <article className="glass-panel card-hover rounded-2xl p-6">
-              <h3 className="text-lg font-semibold">{project.title}</h3>
+              <h3 className="text-lg font-semibold">{project.title[locale]}</h3>
               <p className="mt-3 text-sm leading-relaxed text-[var(--text-soft)]">
                 {project.description[locale]}
               </p>
@@ -45,14 +45,9 @@ export const ProjectsSection = ({ locale, copy, projects }: ProjectsSectionProps
                     {copy.openProject}
                   </a>
                 ) : (
-                  <>
-                    <span className="button-secondary cursor-not-allowed opacity-70">
-                      {copy.openProject}
-                    </span>
-                    <p className="font-mono text-[11px] text-[var(--text-soft)]">
-                      {copy.missingProjectUrl}
-                    </p>
-                  </>
+                  <span className="button-secondary cursor-not-allowed opacity-70">
+                    {copy.openProject}
+                  </span>
                 )}
               </div>
             </article>

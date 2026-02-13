@@ -3,7 +3,10 @@ import { ProjectItem } from "@/types/site";
 export const projects: ProjectItem[] = [
   {
     id: "small-business-management-system",
-    title: "Small Business Management System",
+    title: {
+      es: "Sistema de Gestion PyME",
+      en: "Small Business Management System",
+    },
     description: {
       es: "Sistema ERP-style para operaciones internas, gestion de procesos y reglas de negocio en entornos reales.",
       en: "ERP-style internal operations system with strong business logic and process management for real environments.",
@@ -13,7 +16,10 @@ export const projects: ProjectItem[] = [
   },
   {
     id: "intercollegiate-sports-management-platform",
-    title: "Intercollegiate Sports Management Platform",
+    title: {
+      es: "Plataforma de Gestion de Intercolegiales",
+      en: "Intercollegiate Sports Management Platform",
+    },
     description: {
       es: "Plataforma para administrar torneos, inscripciones y resultados con foco en flujo operativo y datos confiables.",
       en: "Platform to manage tournaments, registrations, and results focused on operational workflow and reliable data.",
@@ -23,7 +29,10 @@ export const projects: ProjectItem[] = [
   },
   {
     id: "truco-tournament-platform",
-    title: "Truco Tournament Platform",
+    title: {
+      es: "Plataforma Torneo de Truco",
+      en: "Truco Tournament Platform",
+    },
     description: {
       es: "Aplicacion para organizacion de partidas, llaves y seguimiento de avance con experiencia simple para usuarios finales.",
       en: "Tournament app for match scheduling, brackets, and progression tracking with a straightforward user experience.",
@@ -33,7 +42,10 @@ export const projects: ProjectItem[] = [
   },
   {
     id: "full-stack-ecommerce-platform",
-    title: "Full-Stack E-commerce Platform",
+    title: {
+      es: "Plataforma E-commerce Full-Stack",
+      en: "Full-Stack E-commerce Platform",
+    },
     description: {
       es: "E-commerce de punta a punta con catalogo, gestion de pedidos y arquitectura preparada para escalar.",
       en: "End-to-end e-commerce application with catalog, order workflows, and architecture designed to scale.",
@@ -43,7 +55,10 @@ export const projects: ProjectItem[] = [
   },
   {
     id: "distributed-logging-system",
-    title: "Distributed Logging System",
+    title: {
+      es: "Sistema de Logging Distribuido",
+      en: "Distributed Logging System",
+    },
     description: {
       es: "Microservicios para trazabilidad de eventos, centralizacion de logs y monitoreo tecnico en sistemas distribuidos.",
       en: "Microservices for event tracing, centralized logs, and technical monitoring in distributed systems.",
@@ -53,7 +68,10 @@ export const projects: ProjectItem[] = [
   },
   {
     id: "microservices-architecture-platform",
-    title: "Microservices Architecture Platform",
+    title: {
+      es: "Plataforma de Arquitectura de Microservicios",
+      en: "Microservices Architecture Platform",
+    },
     description: {
       es: "Implementacion orientada a servicios desacoplados con enfoque en comunicacion, resiliencia y mantenibilidad.",
       en: "Microservice-oriented implementation focused on service communication, resilience, and maintainability.",
