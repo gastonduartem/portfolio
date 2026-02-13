@@ -7,7 +7,7 @@ export const translations: Record<Locale, PortfolioCopy> = {
     },
     nav: {
       home: "Inicio",
-      about: "Sobre mi",
+      about: "Sobre mí",
       skills: "Skills",
       projects: "Proyectos",
       contact: "Contacto",
@@ -20,10 +20,10 @@ export const translations: Record<Locale, PortfolioCopy> = {
     hero: {
       badge: "PORTAFOLIO FULL STACK | REMOTE READY",
       description:
-        "Desarrollo soluciones de software productivas, enfocadas en logica de negocio, escalabilidad y resultados reales.",
+        "Desarrollo soluciones de software productivas, enfocadas en lógica de negocio, escalabilidad y resultados reales.",
       roleLine: "Analista de Desarrollo de Software",
       profileCardText:
-        "Full stack developer con foco backend, arquitectura practica e implementacion orientada al negocio.",
+        "Full stack developer con foco backend, arquitectura práctica e implementación orientada al negocio.",
       avatarPlaceholder: "Placeholder de foto",
       projectsCta: "Ver Proyectos",
       cvCta: "Descargar CV",
@@ -32,26 +32,26 @@ export const translations: Record<Locale, PortfolioCopy> = {
     },
     about: {
       kicker: "Perfil",
-      title: "Sobre mi",
+      title: "Sobre mí",
       summary:
-        "Soy desarrollador de software enfocado en crear soluciones practicas y escalables para problemas reales de negocio. Trabajo en desarrollo de sistemas internos, reglas de negocio y optimizacion de bases de datos, con una mirada estructurada desde Analisis de Sistemas y ejecucion full stack de punta a punta.",
-      full: "Actualmente trabajo como Analista de Desarrollo de Software, donde diseno y mejoro sistemas internos, implemento reglas de negocio, optimizo procesos en bases de datos y traduzco necesidades operativas en soluciones tecnicas confiables. He desarrollado sistemas tipo ERP, plataformas de gestion de torneos, aplicaciones e-commerce full-stack, microservicios de logging distribuido y otras soluciones productivas pensadas para entornos reales. Me encuentro en constante aprendizaje, desafiando mis propios limites y buscando crecer para liderar proyectos de mayor impacto.",
-      readMore: "Leer mas",
+        "Soy desarrollador de software enfocado en crear soluciones prácticas y escalables para problemas reales de negocio. Trabajo en desarrollo de sistemas internos, reglas de negocio y optimización de bases de datos, con una mirada estructurada desde Análisis de Sistemas y ejecución full stack de punta a punta.",
+      full: "Actualmente trabajo como Analista de Desarrollo de Software, donde diseño y mejoro sistemas internos, implemento reglas de negocio, optimizo procesos en bases de datos y traduzco necesidades operativas en soluciones técnicas confiables. He desarrollado sistemas tipo ERP, plataformas de gestión de torneos, aplicaciones e-commerce full-stack, microservicios de logging distribuido y otras soluciones productivas pensadas para entornos reales. Me encuentro en constante aprendizaje, desafiando mis propios límites y buscando crecer para liderar proyectos de mayor impacto.",
+      readMore: "Leer más",
       showLess: "Mostrar menos",
     },
     skills: {
       kicker: "Stack",
-      title: "Tecnologias",
+      title: "Tecnologías",
       description:
-        "Herramientas que uso para construir soluciones completas, mantenibles y listas para produccion.",
+        "Herramientas que uso para construir soluciones completas, mantenibles y listas para producción.",
     },
     projects: {
       kicker: "Trabajo",
       title: "Proyectos Destacados",
       description:
-        "Seis proyectos seleccionados para mostrar capacidad tecnica full stack y foco en sistemas reales.",
+        "Seis proyectos seleccionados para mostrar capacidad técnica full stack y foco en sistemas reales.",
       openProject: "Ir al proyecto",
-      missingProjectUrl: "TODO: completar URL del proyecto (repo o deploy)",
+      missingProjectUrl: "Completar URL del proyecto (repo o deploy)",
     },
     contact: {
       kicker: "Red",
@@ -63,7 +63,7 @@ export const translations: Record<Locale, PortfolioCopy> = {
       email: "Email",
     },
     footer:
-      "Gaston Duarte | Full Stack Developer | En construccion constante.",
+      "Gaston Duarte | Full Stack Developer | En construcción constante.",
   },
   en: {
     loader: {
@@ -115,7 +115,7 @@ export const translations: Record<Locale, PortfolioCopy> = {
       description:
         "Six selected projects that show full stack capability and a systems-first mindset.",
       openProject: "Go to project",
-      missingProjectUrl: "TODO: add project URL (repo or deployed app)",
+      missingProjectUrl: "Add project URL (repo or deployed app)",
     },
     contact: {
       kicker: "Network",
