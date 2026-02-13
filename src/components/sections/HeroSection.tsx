@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ReactNode } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 import { Locale, ProfileData, PortfolioCopy } from "@/types/site";
 
@@ -11,6 +12,96 @@ interface HeroSectionProps {
 
 export const HeroSection = ({ name, profile, locale, copy }: HeroSectionProps) => {
   const showAvatarLabel = profile.avatar.includes("placeholder");
+  const highlightedOnce = new Set<string>();
+  const highlightRules =
+    locale === "en"
+      ? [
+          { key: "scalable", pattern: /\bscalable\b/gi, firstOnly: true },
+          { key: "production-ready", pattern: /\bproduction-ready\b/gi, firstOnly: false },
+          {
+            key: "continuously-learning",
+            pattern: /\bcontinuously learning\b/gi,
+            firstOnly: false,
+          },
+          { key: "solid-architecture", pattern: /\bsolid architecture\b/gi, firstOnly: false },
+        ]
+      : locale === "es"
+        ? [
+            { key: "escalables", pattern: /\bescalables\b/gi, firstOnly: true },
+            {
+              key: "listos-para-produccion",
+              pattern: /\blistos para producción\b/gi,
+              firstOnly: false,
+            },
+            {
+              key: "aprendizaje-continuo",
+              pattern: /\baprendizaje continuo\b/gi,
+              firstOnly: false,
+            },
+            {
+              key: "arquitectura-solida",
+              pattern: /\barquitectura sólida\b/gi,
+              firstOnly: false,
+            },
+          ]
+      : [];
+
+  const highlightParagraph = (text: string): ReactNode => {
+    if (!highlightRules.length) return text;
+
+    const content: ReactNode[] = [];
+    let pointer = 0;
+
+    while (pointer < text.length) {
+      let bestMatch:
+        | {
+            start: number;
+            end: number;
+            key: string;
+            firstOnly: boolean;
+          }
+        | undefined;
+
+      for (const rule of highlightRules) {
+        if (rule.firstOnly && highlightedOnce.has(rule.key)) continue;
+
+        rule.pattern.lastIndex = pointer;
+        const currentMatch = rule.pattern.exec(text);
+        if (!currentMatch) continue;
+
+        const start = currentMatch.index;
+        const end = start + currentMatch[0].length;
+
+        if (!bestMatch || start < bestMatch.start) {
+          bestMatch = { start, end, key: rule.key, firstOnly: rule.firstOnly };
+        }
+      }
+
+      if (!bestMatch) {
+        content.push(text.slice(pointer));
+        break;
+      }
+
+      if (bestMatch.start > pointer) {
+        content.push(text.slice(pointer, bestMatch.start));
+      }
+
+      const highlightedText = text.slice(bestMatch.start, bestMatch.end);
+      content.push(
+        <span key={`${bestMatch.key}-${bestMatch.start}`} className="font-semibold text-[var(--accent)]">
+          {highlightedText}
+        </span>,
+      );
+
+      if (bestMatch.firstOnly) {
+        highlightedOnce.add(bestMatch.key);
+      }
+
+      pointer = bestMatch.end;
+    }
+
+    return content;
+  };
 
   return (
     <section id="home" className="section-shell pt-28 md:pt-32">
@@ -38,7 +129,7 @@ export const HeroSection = ({ name, profile, locale, copy }: HeroSectionProps) =
               <div className="mt-6 max-w-2xl space-y-3">
                 {copy.descriptionParagraphs.map((paragraph) => (
                   <p key={paragraph} className="leading-relaxed text-[var(--text-soft)]">
-                    {paragraph}
+                    {highlightParagraph(paragraph)}
                   </p>
                 ))}
               </div>

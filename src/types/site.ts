@@ -55,7 +55,7 @@ export interface PortfolioCopy {
   };
   hero: {
     badge: string;
-    descriptionParagraphs: [string, string, string];
+    descriptionParagraphs: string[];
     roleLine: string;
     focusTitle: string;
     focusItems: [string, string, string];

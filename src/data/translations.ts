@@ -20,9 +20,7 @@ export const translations: Record<Locale, PortfolioCopy> = {
     hero: {
       badge: "PORTAFOLIO FULL STACK | REMOTE READY",
       descriptionParagraphs: [
-        "Diseño y construyo sistemas de negocio escalables con Node.js, Python, Next.js y PostgreSQL para entornos de producción remotos.",
-        "He desarrollado plataformas estilo ERP, sistemas de gestión de torneos, aplicaciones full-stack de e-commerce y microservicios de logging distribuido utilizados en escenarios de producción.",
-        "Me encuentro en aprendizaje continuo y desafiando mis propios límites, con el objetivo de crecer como un ingeniero de alto impacto capaz de liderar el diseño de sistemas escalables y equipos remote-first.",
+        "Construyo sistemas listos para producción y escalables usando Node.js, Python, Next.js y PostgreSQL. He desarrollado plataformas estilo ERP, aplicaciones e-commerce y microservicios de logging y monitoreo utilizados en entornos reales. Me enfoco en arquitectura sólida, rendimiento y despliegues remotos, y estoy en aprendizaje continuo para liderar diseño de sistemas escalables y equipos remote-first.",
       ],
       roleLine: "Analista de Desarrollo de Software",
       focusTitle: "ÁREAS CLAVE",
@@ -98,9 +96,7 @@ export const translations: Record<Locale, PortfolioCopy> = {
     hero: {
       badge: "FULL STACK PORTFOLIO | REMOTE READY",
       descriptionParagraphs: [
-        "I design and build scalable business systems using Node.js, Python, Next.js, and PostgreSQL for production-ready remote environments.",
-        "I've built ERP-style platforms, tournament management systems, full-stack e-commerce applications, and distributed logging microservices used in production scenarios.",
-        "I'm continuously learning and pushing my limits, aiming to grow into a high-impact engineer capable of leading scalable system design and remote-first teams.",
+        "I build production-ready, scalable systems using Node.js, Python, Next.js, and PostgreSQL. I've developed ERP-style platforms, e-commerce applications, and microservices for logging and monitoring used in real-world environments. I focus on solid architecture, performance, and remote deployments, and I'm continuously learning to lead scalable system design and remote-first teams.",
       ],
       roleLine: "Software Development Analyst",
       focusTitle: "CORE FOCUS",
